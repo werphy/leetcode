@@ -6,15 +6,18 @@ public class Longest_Common_Prefix {
 	 * 
 	 * 
 	 */
-	public String longestCommonPrefix(String[] strs) {
-	    if(strs == null || strs.length == 0)    return "";
-	    String term = strs[0];
-	    for (int i = strs.length -1 ;  i > 0 ; i++) 		
-		{
-	        while(strs[i].indexOf(term) != 0)
-	        	term = term.substring(0,term.length()-1);
-	        i++;
-	    }
-	    return term;
+	public class Solution {
+	    public String longestCommonPrefix(String[] strs) {
+	      	if(strs == null || strs.length == 0||strs[0]=="")    
+	            return "";
+		    String term = strs[0];
+		    for (int i = strs.length -1 ;  i > 0 ; i--) 		
+			{   
+		        while(strs[i].indexOf(term) != 0){  
+		        	term = term.substring(0,term.length()-1);
+	            }
+		    }
+		    return term;
+	}
 	}
 }
